@@ -3,7 +3,7 @@
 # Title: OpsChallenge02
 # Author:Jeff Snyder
 # Date: 07OCT2020
-# Purpose:Create a constant ping to an IP Address
+# Purpose:Create a constant ping to an IP Address sned an email when status changes.
 ###########################
 import smtplib
 import email.utils
