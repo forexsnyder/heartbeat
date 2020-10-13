@@ -8,17 +8,19 @@
 import smtplib
 import email.utils
 import os, datetime, time
+from getpass import getpass
 
 #variables
 gmail_user= input("Your email address: ")
-gmail_password= input("your password: ")
+# gmail_password= input("your password: ")
+gmail_password= getpass()
 
 msg= "Hello, World!"
 sender="jeff@gmail.com"
 destAddress="jeffcodefellows@gmail.com"
 
 now= datetime.datetime.now()
-pop= input("Enter IP Address:")
+ipAddress= input("Enter IP Address:")
 pingState= 1
 
 
@@ -38,13 +40,12 @@ def emailMessage(msg):
 
 def pinging():
     global pingState
-    ping= os.system ("ping -c 1 " + str(pop))
-    #connetion is good
+    ping= os.system ("ping -c 1 " + str(ipAddress))
+    #connection is good
     if ping== 0:
         if (pingState== 0):
-            address= str(pop)
-            # msg = "Testing the first string"
-            msg= f"At {now:%H%M} on {now:%B %d, %Y} {pop} went from down to up."
+            # address= str(pop)
+            msg= f"At {now:%H%M} on {now:%B %d, %Y} {ipAddress} went from down to up."
             emailMessage(msg)
         time.sleep( 2 )
         pingState=1
@@ -52,10 +53,8 @@ def pinging():
     #connection is bad
     else:
         if (pingState== 1):
-            address= str(pop)
-            # msg = "Testing this string"
-            msg= f"At {now:%H%M} on {now:%B %d, %Y} {pop} went from up to down."
-            # print (msg)
+            # address= str(pop)
+            msg= f"At {now:%H%M} on {now:%B %d, %Y} {ipAddress} went from up to down."
             emailMessage(msg)
         time.sleep( 5 )
         pingState= 0
