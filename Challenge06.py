@@ -65,14 +65,15 @@ def encrypt_message(message):
 
     print(encrypted_message)
 
-def decrypt_message(encrypted_message):
+def decrypt_message(e_message):
     """
     Decrypts an encrypted message
     """
+    message=e_message.encode()
     key = load_key()
     f = Fernet(key)
-    message = f.decrypt(encrypted_message)
-
+    message = f.decrypt(message)
+    
     print(message)
 
 def main():
@@ -96,8 +97,8 @@ def main():
         encrypt_message(message)
     elif mode== "4":
         print("You have chosen mode4")
-        encrypted_message=input("You have chosen mode 4.  \nPlease type the message you would like to decrypt:  ")
-        decrypt_message(encrypted_message)
+        e_message=input("You have chosen mode 4.  \nPlease type the message you would like to decrypt (Don't forget to remove the b'....'):  ")
+        decrypt_message(e_message)
 main()
 
 
