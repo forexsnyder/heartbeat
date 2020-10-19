@@ -1,13 +1,16 @@
+
 #!/usr/bin/env python3
 ###########################
 # Title: OpsChallenge02
 # Author:Jeff Snyder
-# Date: 13OCT2020
-# Purpose:Encrypt/Decrypt a Folder and all of it's contents 
+# Date: 18OCT2020
+# Purpose:Encrypt/Decrypt a Folder Recursively
 ###########################
 
-import smtplib
+
+import os
 from cryptography.fernet import Fernet
+import smtplib
 
 def generate_key():
     """
@@ -23,6 +26,31 @@ def load_key():
     """
     return open("secret.key", "rb").read()
 
+def folderEncrypt(fileLocation):
+        path = fileLocation
+        files = []
+
+    # r=root, d=directories, f = files
+        for r, d, f in os.walk(path):
+                for file in f:
+                        files.append(os.path.join(r, file))
+
+        for f in files:
+                print(f)
+                encrypt(f)
+
+def folderDecrypt(fileLocation):
+        path = fileLocation
+        files = []
+
+    # r=root, d=directories, f = files
+        for r, d, f in os.walk(path):
+                for file in f:
+                        files.append(os.path.join(r, file))
+
+        for f in files:
+                print(f)
+                decrypt(f)
 
 def encrypt(fileLocation):
     key = load_key()
@@ -39,6 +67,7 @@ def encrypt(fileLocation):
     with open(fileLocation, "wb") as file:
         file.write(encrypted_data)
 
+        
 def decrypt(fileLocation): 
     """
     Given a fileLocation (str) and key (bytes), it decrypts the file and write it
@@ -54,57 +83,17 @@ def decrypt(fileLocation):
     with open(fileLocation, "wb") as file:
         file.write(decrypted_data)
 
-def encrypt_message(message):
-    """
-    Encrypts a message
-    """
-    key = load_key()
-    encoded_message = message.encode()
-    f = Fernet(key)
-    encrypted_message = f.encrypt(encoded_message)
-
-    print(encrypted_message)
-
-def decrypt_message(e_message):
-    """
-    Decrypts an encrypted message
-    """
-    message=e_message.encode()
-    key = load_key()
-    f = Fernet(key)
-    message = f.decrypt(message)
-    
-    print(message)
-
 def main():
-    global key
-    print("1. Encrypt a file \n2. Decrypt a file  \n3. Encrypt a message \n4. Decrypt a message \n5. Encrypt a Folder")
-    mode=input("Which mode would you like to run? Choose 1-4:  ")
+    print("1. Encrypt a folder \n2. Decrypt a folder")
+    mode=input("Which mode would you like to run? Choose 1-2:  ")
     print("mode is:", mode)
     if mode== "1":
         generate_key()
         print("You have chosen 1")
-        fileLocation=input("You have chosen mode 1.  \nPlease type the location of the file you would like to encrypt:  ")
-        encrypt(fileLocation)
+        fileLocation=input("You have chosen mode 1.  \nPlease type the location of the folder you would like to encrypt:  ")
+        folderEncrypt(fileLocation)
     elif mode== "2":
         print("You have chosen mode 2")
-        fileLocation=input("You have chosen mode 2.  \nPlease type the location of the file you would like to decrypt:  ")
-        decrypt(fileLocation)
-    elif mode== "3":
-        generate_key()
-        print("You have chosen mode3")
-        message=input("You have chosen mode 3.  \nPlease type the message you would like to encrypt:  ")
-        encrypt_message(message)
-    elif mode== "4":
-        print("You have chosen mode4")
-        e_message=input("You have chosen mode 4.  \nPlease type the message you would like to decrypt (Don't forget to remove the b'....'):  ")
-        decrypt_message(e_message)
-    elif mode== 5:
-        print("You have chosen mode5")
-        
-
+        fileLocation=input("You have chosen mode 2.  \nPlease type the location of the folder you would like to decrypt:  ")
+        folderDecrypt(fileLocation)
 main()
-
-
-# help from https://devqa.io/encrypt-decrypt-data-python/
-# help from https://www.thepythoncode.com/article/encrypt-decrypt-files-symmetric-python
