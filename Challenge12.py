@@ -38,13 +38,15 @@ def scanIP(targetIP,startPort,endPort):
 def pingIP(cidrBlock):
     net= ipaddress.ip_network(cidrBlock)
     # skip first and last in the array
+    ipaddressArray=[]
     for a in net:
-        
-        ipaddressArray=ipaddressArray.append(a)
+        ipaddressArray.append(a)
         # icmp = IP(dst=a)/ICMP()
         # resp = sr1(icmp,timeout=10)
         # print(resp)
-        print(ipaddressArray)
+    print(ipaddressArray)
+
+    #replace print with skipping first and last in array.  Loop through array
         
 
 def main():
