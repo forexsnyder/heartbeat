@@ -48,7 +48,7 @@ def pingIP(cidrBlock):
         
 
 def main():
-    print("Do you want to play a game?")
+    print("Shall we play a game?")
     mode=input("Select a mode. Enter 1 to scan an ip address. Enter 2 to ping a range of ip addresses.   ")
 
     if mode== "1":
