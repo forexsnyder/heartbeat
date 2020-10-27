@@ -40,14 +40,24 @@ def mode2():
 
 def main():
     print("Do you want to play a game?")
-    print("Please select a mode. 1 for password cracking.  2 for checking a password against a dictionary")
+    print("Please select a mode. 1 for password cracking.  2 for checking a password against a dictionary.")
     mode=input("Press 1 or 2.   ")
     if mode =="1":
             print("You have selected mode 1.")
             mode1()
-    else:
+    elif mode =="2":
             print("You have selected mode 2.")
             mode2()
+    else:
+        print("Attention to detail.")
+        print("Attention to detail.")
+        print("Attention to detail.")
+        print("Attention to detail.")
+        print("Attention to detail.")
+        print("Attention to detail.")
+        print("Attention to detail.")
+        print("Attention to detail.")
+        main()
 main()
 
 
