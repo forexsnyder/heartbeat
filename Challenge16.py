@@ -6,10 +6,11 @@
 # Purpose: Check or Guess passwords against a dictionary
 ###########################
 import smtplib
-import random
 import itertools
 import sys
 import time
+
+
 def mode1():
     filepath =input("What is the file path of the text file?   ")
     with open(filepath) as fp:
@@ -17,6 +18,7 @@ def mode1():
         while line:
             print("{}".format(line.strip()))
             line = fp.readline()
+            # print(line)
             time.sleep(1)
 def mode2():
     passwordCheck=input("Please enter the password to check.   ")
@@ -36,7 +38,7 @@ def mode2():
 
 
 def main():
-    print("Do you want to play a game?")
+    print("Shall we play a game?")
     print("Please select a mode. 1 for password cracking.  2 for checking a password against a dictionary.")
     mode=input("Press 1 or 2.   ")
     if mode =="1":
