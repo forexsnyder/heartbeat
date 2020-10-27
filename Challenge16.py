@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 ###########################
-# Title: OpsChallenge11
+# Title: OpsChallenge16
 # Author:Jeff Snyder
-# Date: 19OCT2020
-# Purpose: Scan ports
+# Date: 26OCT2020
+# Purpose: Check or Guess passwords against a dictionary
 ###########################
 import smtplib
 import random
@@ -34,7 +34,6 @@ def mode2():
             else:
                 print("{}".format(line.strip()))
                 line = fp.readline()
-                time.sleep(1)
                 cnt += 1
 
 
