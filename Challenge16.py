@@ -14,18 +14,15 @@ def mode1():
     filepath =input("What is the file path of the text file?   ")
     with open(filepath) as fp:
         line = fp.readline()
-        cnt = 1
         while line:
             print("{}".format(line.strip()))
             line = fp.readline()
             time.sleep(1)
-            cnt += 1
 def mode2():
     passwordCheck=input("Please enter the password to check.   ")
     filepath =input("What is the file path of the text file?   ")
     with open(filepath) as fp:
         line = fp.readline()
-        cnt = 1
         while line:
             line=line.strip()
             if line == passwordCheck:
@@ -34,7 +31,7 @@ def mode2():
             else:
                 print("{}".format(line.strip()))
                 line = fp.readline()
-                cnt += 1
+
 
 
 
