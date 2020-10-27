@@ -47,8 +47,10 @@ def bruteForceSSH(secret, ipAddress, user):
 def main():
     print("Shall we play a game?")
     user=input("What is the username for the SSH connection?")
-    ipAddress=input("What is the ip address of the target system?")
-    txtFile=input("What is the folder path to your dictionary file?")
+    ipAddress="192.168.29.150"
+    txtFile="/home/jeff/Desktop/sample.txt"
+    # ipAddress=input("What is the ip address of the target system?")
+    # txtFile=input("What is the folder path to your dictionary file?")
     cracker(user, ipAddress, txtFile)
     
 main()

