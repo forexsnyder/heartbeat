@@ -19,7 +19,7 @@ def cracker(user, ipAddress, txtFile ):
         s=pxssh.pxssh()
         try:
             s.login(ipAddress, user, secret)
-            print("The Password is  "+ secret)
+            print("The password is  "+ secret)
             break
             
             
@@ -28,11 +28,7 @@ def cracker(user, ipAddress, txtFile ):
             print(e)
             time.sleep(1)
     
-        
-
-
-
-            
+             
             
 def main():
     print("Shall we play a game?")
