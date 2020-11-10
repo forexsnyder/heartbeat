@@ -1,5 +1,0 @@
-
-INFO:root:password refused
-INFO:root:password refused
-INFO:root:The password jeff
-INFO:root:Finished
