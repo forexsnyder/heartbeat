@@ -31,7 +31,6 @@ def scanIP(targetIP,startPort,endPort):
             elif(response.haslayer(TCP)):
                 if(response.getlayer(TCP).flags ==0x14):
                     print("This port is closed")
-
             i +=1
             print(response, i)
 

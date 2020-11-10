@@ -1,0 +1,147 @@
+ERROR:root:Could not establish connection to host
+Traceback (most recent call last):
+  File "Challenge26.py", line 23, in cracker
+    s.login(ipAddress, user, secret)
+  File "/usr/lib/python3/dist-packages/pexpect/pxssh.py", line 386, in login
+    raise ExceptionPxssh('Could not establish connection to host')
+pexpect.pxssh.ExceptionPxssh: Could not establish connection to host
+ERROR:root:Could not establish connection to host
+Traceback (most recent call last):
+  File "Challenge26.py", line 23, in cracker
+    s.login(ipAddress, user, secret)
+  File "/usr/lib/python3/dist-packages/pexpect/pxssh.py", line 386, in login
+    raise ExceptionPxssh('Could not establish connection to host')
+pexpect.pxssh.ExceptionPxssh: Could not establish connection to host
+ERROR:root:Could not establish connection to host
+Traceback (most recent call last):
+  File "Challenge26.py", line 23, in cracker
+    s.login(ipAddress, user, secret)
+  File "/usr/lib/python3/dist-packages/pexpect/pxssh.py", line 386, in login
+    raise ExceptionPxssh('Could not establish connection to host')
+pexpect.pxssh.ExceptionPxssh: Could not establish connection to host
+ERROR:root:Could not establish connection to host
+Traceback (most recent call last):
+  File "Challenge26.py", line 23, in cracker
+    s.login(ipAddress, user, secret)
+  File "/usr/lib/python3/dist-packages/pexpect/pxssh.py", line 386, in login
+    raise ExceptionPxssh('Could not establish connection to host')
+pexpect.pxssh.ExceptionPxssh: Could not establish connection to host
+ERROR:root:Could not establish connection to host
+Traceback (most recent call last):
+  File "Challenge26.py", line 23, in cracker
+    s.login(ipAddress, user, secret)
+  File "/usr/lib/python3/dist-packages/pexpect/pxssh.py", line 386, in login
+    raise ExceptionPxssh('Could not establish connection to host')
+pexpect.pxssh.ExceptionPxssh: Could not establish connection to host
+ERROR:root:Could not establish connection to host
+Traceback (most recent call last):
+  File "Challenge26.py", line 23, in cracker
+    s.login(ipAddress, user, secret)
+  File "/usr/lib/python3/dist-packages/pexpect/pxssh.py", line 386, in login
+    raise ExceptionPxssh('Could not establish connection to host')
+pexpect.pxssh.ExceptionPxssh: Could not establish connection to host
+ERROR:root:Could not establish connection to host
+Traceback (most recent call last):
+  File "Challenge26.py", line 23, in cracker
+    s.login(ipAddress, user, secret)
+  File "/usr/lib/python3/dist-packages/pexpect/pxssh.py", line 386, in login
+    raise ExceptionPxssh('Could not establish connection to host')
+pexpect.pxssh.ExceptionPxssh: Could not establish connection to host
+ERROR:root:Could not establish connection to host
+Traceback (most recent call last):
+  File "Challenge26.py", line 23, in cracker
+    s.login(ipAddress, user, secret)
+  File "/usr/lib/python3/dist-packages/pexpect/pxssh.py", line 386, in login
+    raise ExceptionPxssh('Could not establish connection to host')
+pexpect.pxssh.ExceptionPxssh: Could not establish connection to host
+ERROR:root:Could not establish connection to host
+Traceback (most recent call last):
+  File "Challenge26.py", line 23, in cracker
+    s.login(ipAddress, user, secret)
+  File "/usr/lib/python3/dist-packages/pexpect/pxssh.py", line 386, in login
+    raise ExceptionPxssh('Could not establish connection to host')
+pexpect.pxssh.ExceptionPxssh: Could not establish connection to host
+ERROR:root:Could not establish connection to host
+Traceback (most recent call last):
+  File "Challenge26.py", line 23, in cracker
+    s.login(ipAddress, user, secret)
+  File "/usr/lib/python3/dist-packages/pexpect/pxssh.py", line 386, in login
+    raise ExceptionPxssh('Could not establish connection to host')
+pexpect.pxssh.ExceptionPxssh: Could not establish connection to host
+ERROR:root:Could not establish connection to host
+Traceback (most recent call last):
+  File "Challenge26.py", line 23, in cracker
+    s.login(ipAddress, user, secret)
+  File "/usr/lib/python3/dist-packages/pexpect/pxssh.py", line 386, in login
+    raise ExceptionPxssh('Could not establish connection to host')
+pexpect.pxssh.ExceptionPxssh: Could not establish connection to host
+ERROR:root:Could not establish connection to host
+Traceback (most recent call last):
+  File "Challenge26.py", line 23, in cracker
+    s.login(ipAddress, user, secret)
+  File "/usr/lib/python3/dist-packages/pexpect/pxssh.py", line 386, in login
+    raise ExceptionPxssh('Could not establish connection to host')
+pexpect.pxssh.ExceptionPxssh: Could not establish connection to host
+ERROR:root:Could not establish connection to host
+Traceback (most recent call last):
+  File "Challenge26.py", line 23, in cracker
+    s.login(ipAddress, user, secret)
+  File "/usr/lib/python3/dist-packages/pexpect/pxssh.py", line 386, in login
+    raise ExceptionPxssh('Could not establish connection to host')
+pexpect.pxssh.ExceptionPxssh: Could not establish connection to host
+ERROR:root:Could not establish connection to host
+Traceback (most recent call last):
+  File "Challenge26.py", line 23, in cracker
+    s.login(ipAddress, user, secret)
+  File "/usr/lib/python3/dist-packages/pexpect/pxssh.py", line 386, in login
+    raise ExceptionPxssh('Could not establish connection to host')
+pexpect.pxssh.ExceptionPxssh: Could not establish connection to host
+ERROR:root:Could not establish connection to host
+Traceback (most recent call last):
+  File "Challenge26.py", line 23, in cracker
+    s.login(ipAddress, user, secret)
+  File "/usr/lib/python3/dist-packages/pexpect/pxssh.py", line 386, in login
+    raise ExceptionPxssh('Could not establish connection to host')
+pexpect.pxssh.ExceptionPxssh: Could not establish connection to host
+ERROR:root:Could not establish connection to host
+Traceback (most recent call last):
+  File "Challenge26.py", line 23, in cracker
+    s.login(ipAddress, user, secret)
+  File "/usr/lib/python3/dist-packages/pexpect/pxssh.py", line 386, in login
+    raise ExceptionPxssh('Could not establish connection to host')
+pexpect.pxssh.ExceptionPxssh: Could not establish connection to host
+ERROR:root:Could not establish connection to host
+Traceback (most recent call last):
+  File "Challenge26.py", line 23, in cracker
+    s.login(ipAddress, user, secret)
+  File "/usr/lib/python3/dist-packages/pexpect/pxssh.py", line 386, in login
+    raise ExceptionPxssh('Could not establish connection to host')
+pexpect.pxssh.ExceptionPxssh: Could not establish connection to host
+ERROR:root:Could not establish connection to host
+Traceback (most recent call last):
+  File "Challenge26.py", line 23, in cracker
+    s.login(ipAddress, user, secret)
+  File "/usr/lib/python3/dist-packages/pexpect/pxssh.py", line 386, in login
+    raise ExceptionPxssh('Could not establish connection to host')
+pexpect.pxssh.ExceptionPxssh: Could not establish connection to host
+ERROR:root:Could not establish connection to host
+Traceback (most recent call last):
+  File "Challenge26.py", line 23, in cracker
+    s.login(ipAddress, user, secret)
+  File "/usr/lib/python3/dist-packages/pexpect/pxssh.py", line 386, in login
+    raise ExceptionPxssh('Could not establish connection to host')
+pexpect.pxssh.ExceptionPxssh: Could not establish connection to host
+ERROR:root:Could not establish connection to host
+Traceback (most recent call last):
+  File "Challenge26.py", line 23, in cracker
+    s.login(ipAddress, user, secret)
+  File "/usr/lib/python3/dist-packages/pexpect/pxssh.py", line 386, in login
+    raise ExceptionPxssh('Could not establish connection to host')
+pexpect.pxssh.ExceptionPxssh: Could not establish connection to host
+ERROR:root:Could not establish connection to host
+Traceback (most recent call last):
+  File "Challenge26.py", line 23, in cracker
+    s.login(ipAddress, user, secret)
+  File "/usr/lib/python3/dist-packages/pexpect/pxssh.py", line 386, in login
+    raise ExceptionPxssh('Could not establish connection to host')
+pexpect.pxssh.ExceptionPxssh: Could not establish connection to host

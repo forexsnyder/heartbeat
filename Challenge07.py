@@ -84,6 +84,7 @@ def decrypt(fileLocation):
         file.write(decrypted_data)
 
 def main():
+
     print("1. Encrypt a folder \n2. Decrypt a folder")
     mode=input("Which mode would you like to run? Choose 1-2:  ")
     print("mode is:", mode)
