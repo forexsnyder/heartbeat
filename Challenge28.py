@@ -15,8 +15,8 @@ import logging
 
 def cracker(user, ipAddress, txtFile ):
     logger= logging.getLogger("BruteForce")
-    c_handler=logging.FileHandler('usedWords.txt')
-    f_handler=logging.FileHandler('report.txt')
+    c_handler=logging.FileHandler('report.txt')
+    f_handler=logging.FileHandler('usedWords.txt')
     c_handler.setLevel(logging.ERROR)
     f_handler.setLevel(logging.WARNING)
     c_format=logging.Formatter('%(message)s')
