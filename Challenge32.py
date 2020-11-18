@@ -1,21 +1,22 @@
 #!/usr/bin/env python3
 ###########################
-# Title: OpsChallenge31
+# Title: OpsChallenge32
 # Author:Jeff Snyder
-# Date: 16NOV2020
+# Date: 17NOV2020
 # Purpose: Search for file
 # With help from https://stackoverflow.com/questions/1724693/find-a-file-in-python
 ###########################
 
-
+import hashlib
 import os, fnmatch
+
 def scanWindows(fileDirectory, fileName):
     results=[]
-    for paths, subdirs, files in os.walk(start_dir, topdown=True):
-        for file in files:
-            full_path = os.path.join(paths, file)
-            normalised = os.path.normpath(full_path)
-    print(normalised)
+    for root, dirs, files in os.walk(fileDirectory):
+        for name in files:
+            if fnmatch.fnmatch(name, fileName):
+                results.append(os.path.join(root, name))
+    return print(results)
 
 
 def scanLinux(fileDirectory, fileName):
